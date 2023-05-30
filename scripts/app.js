@@ -1,4 +1,4 @@
-import confetti from "http://cdn.skypack.dev/canvas-confetti";
+import confetti from "https://cdn.skypack.dev/canvas-confetti";
 
 let container = document.getElementsByClassName("page-container")[0];
 
