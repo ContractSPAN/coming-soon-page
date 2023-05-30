@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap");
+
+:root {
+    --animate-delay: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.page-container {
+    width: 100%;
+    height: 100%;
+}
+
+.page-container {
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.contents {
+    width: 100%;
+    height: 100%;
+    padding-inline: 120px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+.page-left {
+    width: 80%;
+}
+.title {
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin-block: 20px 5px;
+}
+/* 
+.subscribe-box {
+    border: 4px solid rgba(0, 0, 0, 0.597);
+    border-radius: 100px;
+    overflow: hidden;
+    height: 60px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    margin-left: -10px;
+}
+.email-input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+} */
+
+.confetti-canvas {
+    position: absolute;
+    pointer-events: none;
+}
+
+.confetti-canvas:nth-of-type(1) {
+    bottom: 0;
+    left: 0;
+}
+
+.confetti-button {
+    transition: 0.3s;
+    width: 200px;
+    border-radius: 30px;
+    margin-block: 20px 10px;
+    padding: 10px 20px;
+    background-color: #2eb552;
+    color: white;
+    font-weight: 600;
+    font-size: large;
+    cursor: pointer;
+    border: none;
+}
+.confetti-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+        rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    transform: translateY(-3px);
+    background-color: #06b034;
+}
+.confetti-button:active {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+        rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    transform: translateY(4px);
+    background-color: #06b034;
+}
+
+.page-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    width: 620px;
+    z-index: 8;
+}
+
+.message {
+    font-size: 1.2em;
+}
+
+.subtitle {
+    margin-top: 10px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-small {
+    font-size: 0.9em;
+}
+
+.background-green-blur,
+.background-yellow-blur {
+    position: absolute;
+    height: 400px;
+    width: 650px;
+    border-radius: 20%;
+    filter: blur(400px);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.background-green-blur {
+    background-color: #76c4d5;
+    top: -100px;
+    right: 0px;
+}
+
+.background-yellow-blur {
+    opacity: 0.6;
+    background-color: #e3e76c;
+    bottom: -200px;
+    left: -200px;
+}
+
+/* Navbar Styling */
+
+#navbar {
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    top: 0;
+    left: 0;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+    /* width: 80%;
+    margin: 20px auto;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border-radius: 50px;
+    border: 5px solid rgb(5, 176, 5); */
+}
+#navbar-logo {
+    width: 150px;
+}
+
+#nav-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-button {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: large;
+    cursor: pointer;
+    transition: 0.2s;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+.nav-button:hover {
+    transform: translateY(-3px);
+    background-color: #06b034;
+    color: white;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.active-nav-button {
+    transform: translateY(-3px);
+    background-color: #fff;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.cursor {
+    z-index: 10;
+    width: 82px;
+    height: 82px;
+    background: rgb(0, 255, 34);
+    opacity: .3;
+    filter: blur(30px);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-50%) translateY(-50%);
+    pointer-events: none;
+}
