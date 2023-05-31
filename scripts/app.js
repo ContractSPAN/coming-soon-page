@@ -88,7 +88,7 @@ function followCursor() {
     cursor.style.left = cursorPos.x + "px";
     cursor.style.top = cursorPos.y + "px";
 
-    requestAnimationFrame(followCursor)
+    requestAnimationFrame(followCursor);
 
 }  
 

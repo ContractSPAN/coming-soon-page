@@ -115,12 +115,17 @@ html {
 }
 
 .hero-image {
-    width: 620px;
+    width: 520px;
     z-index: 8;
 }
 
 .message {
     font-size: 1.2em;
+}
+
+.coming-soon-message {
+    font-size: 1.2em;
+    color: #06b034;
 }
 
 .subtitle {
