@@ -46,7 +46,7 @@ html {
     width: 80%;
 }
 .title {
-    font-size: 3em;
+    font-size: 3vw;
     font-weight: bold;
     line-height: 1.2em;
     margin-block: 20px 5px;
@@ -93,6 +93,7 @@ html {
     font-size: large;
     cursor: pointer;
     border: none;
+    background-blend-mode: luminosity;
 }
 .confetti-button:hover {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
@@ -115,16 +116,12 @@ html {
 }
 
 .hero-image {
-    width: 520px;
+    width: 570px;
     z-index: 8;
 }
 
-.message {
-    font-size: 1.2em;
-}
-
 .coming-soon-message {
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: #06b034;
 }
 
@@ -147,6 +144,7 @@ html {
     width: 650px;
     border-radius: 20%;
     filter: blur(400px);
+    
     opacity: 0.8;
     z-index: -1;
 }
@@ -193,8 +191,10 @@ html {
 
 #nav-left {
     width: 100%;
+    padding-inline: 160px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    /* justify-content: center; */
 }
 
 .nav-button {
@@ -234,4 +234,82 @@ html {
     left: 0;
     transform: translateX(-50%) translateY(-50%);
     pointer-events: none;
+}
+
+@media (max-width: 1400px) {
+
+    #nav-left {
+        justify-content: center;
+    }
+
+    .contents {
+        padding-inline: 10px;
+    }
+
+    .hero-image {
+        width: 450px;
+    }
+
+    .title {
+        font-size: 2.5vw;
+    }
+}
+
+@media (max-width: 915px) {
+
+    .page-container {
+        padding-inline: 50px;
+    }
+    
+
+    .hero-image {
+        width: 250px;
+    }
+
+    .title {
+        font-size: 2.5vw;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .contents {
+        grid-template-columns: 1fr;
+    }
+
+    .page-container {
+        padding-inline: 20px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 7vw;
+    }
+
+    .text-small {
+        font-size: .8em;
+    }
+
+    .page-left {
+        text-align: center;
+        width: 100%;
+    }
+
+    .page-right {
+        height: 100%;
+        align-items: flex-start;
+    }
+
+    #navbar {
+        padding: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .page-container {
+        padding-inline: 80px;
+    }
 }
